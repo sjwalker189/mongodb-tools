@@ -1,0 +1,15 @@
+{
+  "name": "mongodb-tools",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "esbuild": "^0.23.0",
+    "mongodb": "^6.8.0",
+    "mongodb-memory-server": "^10.0.0",
+    "prettier": "^3.3.3",
+    "tsc": "^2.0.4"
+  }
+}
