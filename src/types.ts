@@ -21,3 +21,23 @@ export type Operator = LogicalOperator | ArrayOperator;
 export type LogicalFilter<T> = [LogicalOperator, T];
 export type ArrayFilter<T extends Array<any>> = [ArrayOperator, T];
 export type Filter<T> = T | LogicalFilter<T> | ArrayFilter<ToArray<T>>;
+
+export type Document = Record<string, any>;
+
+export type HasOneRelation<RelatedDocument extends Document = {}> = {
+  /** The field to join from on the current collection */
+  localField: string;
+  /** The field to join to on the remote collection */
+  foreignField: string;
+  /** The name of the remote collection*/
+  from: string;
+};
+
+export type HasManyRelation<RelatedDocument extends Document = {}> = {
+  /** The field to join from on the current collection */
+  localField: string;
+  /** The field to join to on the remote collection */
+  foreignField: string;
+  /** The name of the remote collection*/
+  from: string;
+};
